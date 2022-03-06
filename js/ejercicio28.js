@@ -1,21 +1,18 @@
 const boton1 = document.getElementById("boton1");
 boton1.addEventListener('click', () => {
-    var nnotas = new Number();
-    var i = new Number();
-    var promedio = new Number();
-    var sumnotas = new Number();
-    var vartem = new Number();
-    var nombrealum = new String();
+    var num, codificador, num1;
+    num = Number(prompt("Ingrese un número"));
+    num1 = num;
+    codificador = 0;
 
-    nombrealum = String(prompt("Ingrese el nombre del alumno"));
-    nnotas = Number(prompt("Ingrese la cantidad de notas que tiene"));
-    i = 1;
-    sumnotas = 0;
-    while (i <= nnotas) {
-        vartem = Number(prompt("Ingrese la nota número: " + i));
-        sumnotas = sumnotas + vartem;
-        i = i + 1;
+    do {
+        codificador = (codificador * 10) + (num % 10);
+        num = Math.trunc(num / 10);
+    } while (num > 0);
+    document.getElementById('inver').innerHTML = "El número invertido es: " + codificador
+    if (codificador == num1) {
+        document.getElementById('siP').innerHTML = "Si es un número Palíndromo"
+    } else {
+        document.getElementById('siP').innerHTML = "No es un número Palíndromo"
     }
-    promedio = sumnotas / nnotas;
-    document.getElementById("promedio").innerHTML = "El promedio es: " + promedio
 })

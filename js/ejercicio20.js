@@ -1,16 +1,18 @@
 const boton1 = document.getElementById("boton1");
 boton1.addEventListener('click', () => {
-    
-    var num,d1,r1,d2,d3;
-    num = Number(prompt("Ingrese un número de 3 sifras"))
-    d1 = (num-(num % 100))/100;
-    r1 = num % 100;
-    d2 = (r1-(r1 % 10))/10;
-    d3 = r1 % 10;
+    var num, codificador, num1;
+    num = Number(prompt("Ingrese un número de 3 dijitos"));
+    num1 = num;
+    codificador = 0;
 
-    if (num == ((d3 * 100)+(d2 * 10)+d1)) {
-        document.getElementById('si').innerHTML = "El número ingresado es Palíndromo"
+    do {
+        codificador = (codificador * 10) + (num % 10);
+        num = Math.trunc(num / 10);
+    } while (num > 0);
+    document.getElementById('inver').innerHTML = "El número invertido es: " + codificador
+    if (codificador == num1) {
+        document.getElementById('siP').innerHTML = "Si es un número Palíndromo"
     } else {
-        document.getElementById('no').innerHTML = "El número ingresado no es Palíndromo"
+        document.getElementById('siP').innerHTML = "No es un número Palíndromo"
     }
 })
