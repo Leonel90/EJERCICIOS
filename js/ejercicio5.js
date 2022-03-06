@@ -10,7 +10,7 @@ boton1.addEventListener('click', () => {
     promedio =(nota1 + nota2 + nota3)/3;
     if (promedio < 6.95) {
         document.getElementById('nomEst').innerHTML = "Estudiante " + nombreEstudiante
-        document.getElementById('promedio').innerHTML = "Su promedio es" + promedio
+        document.getElementById('promedio').innerHTML = "Su promedio es: " + promedio
         document.getElementById('estado').innerHTML = "USTED A REPROBADO"
     } else {
         document.getElementById('nomEst').innerHTML = "Estudiante " + nombreEstudiante

@@ -13,7 +13,7 @@ boton1.addEventListener('click', () => {
     if (codificador == num1) {
         document.getElementById('siP').innerHTML = "Si es un número Palíndromo"
     } else {
-        document.getElementById('noP').innerHTML = "No es un número Palíndromo"
+        document.getElementById('siP').innerHTML = "No es un número Palíndromo"
     }
     num = Number(prompt("Ingrese un número de 5 digitos"));
     num1 = num;
@@ -26,6 +26,6 @@ boton1.addEventListener('click', () => {
     if (codificador == num1) {
         document.getElementById('siP1').innerHTML = "Si es un número Palíndromo"
     } else {
-        document.getElementById('noP1').innerHTML = "No es un número Palíndromo"
+        document.getElementById('siP1').innerHTML = "No es un número Palíndromo"
     }
 })
